@@ -1,5 +1,5 @@
 let recipientsParam = new URL(window.location.href).searchParams.get("recipients");
-let recipients = recipientsParam === null ? [ "Lorem Ipsum", "Dolor Sit Amet" ] : recipientsParam.split(",");
+let recipients = recipientsParam === null ? [ ] : recipientsParam.split(",");
 
 let html = "";
 let i = 0;
