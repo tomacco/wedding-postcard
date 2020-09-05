@@ -1,0 +1,89 @@
+body {
+    background: #9F8348;
+}
+
+.card-holder {
+    height: 90vh;
+    width: 90vw;
+    margin: 5vh auto;
+}
+
+.flip-card {
+    display: table;
+    margin: auto;
+
+    perspective: 5000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* Needed to position the front and back side */
+.flip-card-inner {
+    display: inline-block;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #0002;
+
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    position: relative;
+    transform: rotateY(180deg);
+}
+
+img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.recipients {
+    position: absolute;
+    top: 38%;
+    left: 55%;
+    right: 15%;
+
+    font-family: "Georgia", serif;
+    font-style: italic;
+    text-align: left;
+    color: #9F8348;
+}
+
+.recipients h2 {
+    margin-bottom: 0.3em;
+}
+
+.recipients p {
+    margin-top: 0.5em;
+}
+
+.line {
+    color: #9F8348;
+    border-top: 1px solid #9F8348;
+    margin-top: -1.1em;
+}
+
+#info {
+    margin-top: 3em;
+}
+
+#info a {
+    color: #9F8348;
+}
